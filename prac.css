@@ -1,0 +1,380 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f7f3;
+    color: #26352c;
+}
+
+/* NAVIGATION */
+
+header {
+    background: #4B0082;
+    color: white;
+    padding: 18px 7%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h2 {
+    font-size: 24px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 430px;
+    background:
+        linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48)),
+        url("pp.webp");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 60px 9%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-content p:first-child {
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 18px;
+}
+
+.hero-content p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.explore-btn {
+    display: inline-block;
+    background: #e6a84c;
+    color: #173d32;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    max-width: 1250px;
+    margin: auto;
+    padding: 65px 25px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title p:first-child {
+    color: #bd8738;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.section-title h1 {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+/* SEARCH BAR */
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-container input:focus {
+    border-color: #28644d;
+}
+
+/* MUNICIPALITY BUTTONS */
+
+.municipality-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.municipality-btn {
+    padding: 11px 19px;
+    border: 1px solid #28644d;
+    background: white;
+    color: #28644d;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.municipality-btn:hover,
+.municipality-btn.active {
+    background: #28644d;
+    color: white;
+}
+
+/* DESTINATION COUNT */
+
+#destinationCount {
+    margin-bottom: 18px;
+    color: #777;
+    font-size: 14px;
+}
+
+/* DESTINATION CARDS */
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.13);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card-content p {
+    color: #777;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.card-town {
+    display: inline-block;
+    background: #e8f0e9;
+    color: #28644d;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+/* DETAIL VIEW */
+
+.detail-view {
+    display: none;
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.09);
+    animation: appear 0.3s ease;
+}
+
+.detail-view.show {
+    display: block;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.back-btn {
+    padding: 11px 18px;
+    background: #28644d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.back-btn:hover {
+    background: #173d32;
+}
+
+.detail-image {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.detail-content {
+    max-width: 850px;
+}
+
+.detail-content h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.detail-content p {
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.detail-info {
+    background: #f1f5f0;
+    padding: 18px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.detail-info p {
+    margin-bottom: 8px;
+}
+
+/* NO RESULTS */
+
+.no-results {
+    display: none;
+    text-align: center;
+    padding: 50px 10px;
+}
+
+.no-results h2 {
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #173d32;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+    line-height: 2;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+    .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 16px 5%;
+    }
+
+    .navbar h2 {
+        font-size: 20px;
+    }
+
+    .hero {
+        min-height: 350px;
+        padding: 40px 7%;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .container {
+        padding: 45px 16px;
+    }
+
+    .section-title h1 {
+        font-size: 28px;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-card img {
+        height: 220px;
+    }
+
+    .detail-view {
+        padding: 15px;
+    }
+
+    .detail-image {
+        height: 250px;
+    }
+
+    .detail-content h1 {
+        font-size: 27px;
+    }
+
+    .municipality-container {
+        gap: 8px;
+    }
+
+    .municipality-btn {
+        padding: 9px 13px;
+        font-size: 13px;
+    }
+}

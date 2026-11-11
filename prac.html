@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Siquijor</title>
+    <link rel="stylesheet" href="prac.css">
+       
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h2>Explore Siquijor</h2>
+            <a href="#home">Home</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p>THE ISLAND OF FIRE</p>
+            <h1>Discover the Beauty of Siquijor</h1>
+            <p>
+                Explore the beautiful destinations, natural wonders,
+                and cultural heritage of Siquijor Island.
+            </p>
+            <a href="#destinations" class="explore-btn">
+                Explore Destinations
+            </a>
+        </div>
+    </section>
+
+    <main class="container" id="destinations">
+
+        <div class="section-title">
+            <p>EXPLORE THE ISLAND</p>
+            <h1>Tourist Destinations</h1>
+            <p>Discover amazing places across the six municipalities.</p>
+        </div>
+
+        <div class="search-container">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search destinations..."
+            >
+        </div>
+
+        <div class="municipality-container" id="municipalityButtons">
+            <button class="municipality-btn active" data-town="All">
+                All
+            </button>
+            <button class="municipality-btn" data-town="Siquijor">
+                Siquijor
+            </button>
+            <button class="municipality-btn" data-town="San Juan">
+                San Juan
+            </button>
+            <button class="municipality-btn" data-town="Lazi">
+                Lazi
+            </button>
+            <button class="municipality-btn" data-town="Maria">
+                Maria
+            </button>
+            <button class="municipality-btn" data-town="Larena">
+                Larena
+            </button>
+            <button class="municipality-btn" data-town="Enrique Villanueva">
+                Enrique Villanueva
+            </button>
+        </div>
+
+        <div id="destinationCount"></div>
+
+        <div class="destination-grid" id="destinationGrid">
+        </div>
+
+        <div id="detailView" class="detail-view"></div>
+
+        <div id="noResults" class="no-results">
+            <h2>No destinations found.</h2>
+            <p>Try searching for another destination.</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <h2>Explore Siquijor</h2>
+        <p>Discover the beauty of the Island of Fire.</p>
+        <p>© 2026 Explore Siquijor. All Rights Reserved.</p>
+    </footer>
+
+    <script src="prac.js"></script>
+</body>
+</html>
